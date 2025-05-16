@@ -12,7 +12,11 @@ func SetupRouter() *gin.Engine {
 	r.GET("/orders", controller.GetAllOrders)
 	r.POST("/orders", controller.CreateOrder)
 
-	// Add more: /users, /products, /categories
+	// User
+	r.GET("/users", controller.GetUsers)
+
+	// Products
+	r.GET("/products", controller.GetProducts)
 
 	return r
 }

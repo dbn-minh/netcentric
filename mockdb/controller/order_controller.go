@@ -19,7 +19,6 @@ func CreateOrder(c *gin.Context) {
 	}
 	newOrder.ID = len(mockdb.Orders) + 1
 
-	// Tính tổng tiền
 	total := 0.0
 	for _, item := range newOrder.Items {
 		for _, p := range mockdb.Products {
